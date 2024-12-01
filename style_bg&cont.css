@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "SUSE", system-ui;
+	color: #EEEEEE;
+}
+
+body{
+	background-color: #222831;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.background_container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.background_container > * > *{
+	position: fixed;
+	display: flex;	
+	justify-content: center;
+	align-items: center;
+	transition: top 2s cubic-bezier(0.22, 0.61, 0.36, 1);
+	top: 100%;
+	width: 50px;
+	height: 50px;
+}
+.background_container > * > * > *{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: fixed;
+}
+.background_container > *{
+	position: fixed;
+	top: 100%;
+}
+
+.background_container > * > * .bb1{
+	background-color: #f6277b;
+	box-shadow: 0px 0px 50px 10px #f6277b;
+}
+.background_container > * > * .bb2{
+	background-color: #ea4b21;
+	box-shadow: 0px 0px 50px 10px #ea4b21;
+}
+.background_container > * > * .bb3{
+	background-color: #fffd01;
+	box-shadow: 0px 0px 50px 10px #fffd01;
+}
+.background_container > * > * .bb4{
+	background-color: #33fe00;
+	box-shadow: 0px 0px 50px 10px #33fe00;
+}
+.background_container > * > * .bb5{
+	background-color: #01c3ff;
+	box-shadow: 0px 0px 50px 10px #01c3ff;
+}
+.background_container > * > * .bb6{
+	background-color: #0020ff;
+	box-shadow: 0px 0px 50px 10px #0020ff;
+}
+.background_container > * > * .bb7{
+	background-color: #8200ff;
+	box-shadow: 0px 0px 50px 10px #8200ff;
+}
+.background_container > * > * .bb8{
+	background-color: #681fea;
+	box-shadow: 0px 0px 50px 10px #681fea;
+}
+.background_container > * > * .bb9{
+	background-color: #fa00ff;
+	box-shadow: 0px 0px 50px 10px #fa00ff;
+}
+.background_container > * > * .bb10{
+	background-color: #ff005b;
+	box-shadow: 0px 0px 50px 10px #ff005b;
+}
+
+.container{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-color: #C9DABF;
+	display: grid;
+	place-items: center;
+	position: relative;
+}
+
+.container .button_cont{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	display: grid;
+	place-items: center;
+}
+.container .button_cont .btn{
+	width: 100%;
+	height: 100%;
+	background-color: #222831;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	position: relative;
+	z-index: 5;
+	transition: all 0.75s;
+}
+.container .button_cont .visual_ .cir1,
+.container .button_cont .visual_ .cir2{
+	content: '';
+	background-color: #808D7C;
+	position: absolute;
+	z-index: 4;
+	width: 0%;
+	height: 0%;
+	border-radius: 50%;
+	transition: all 1s;
+}
+.container .button_cont .visual_ .cir2{background-color: #9CA986; transition: all 1.75s; z-index: 3}
+.container .button_cont .btn > *{
+	font-weight: bolder;
+	font-size: clamp(50px, 3vw, 8vw);
+	user-select: none;
+	transition: all 0.5s;
+}
+.container .button_cont .visual_{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+.container .button_cont .visual_ .line1,
+.container .button_cont .visual_ .line2,
+.container .button_cont .visual_ .outline_cir1{
+	position: absolute;
+	background-color: #5F6F65;
+	z-index: 1;
+	transition: all 1s cubic-bezier(0.53, 0.15, 0.56, 0.98);
+}
+.container .button_cont .visual_ .background_fk{
+	position: absolute;
+	background-color: #C9DABF;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	z-index: 2;
+}
+.container .button_cont .visual_ .outline_cir1{
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border-radius: 0%;
+	outline: 10px solid #5F6F65;
+	z-index: 2;
+	transition: all 1s cubic-bezier(0.53, 0.15, 0.56, 0.98);
+}
+.container .button_cont .visual_ .line1{
+	width: 0vw;
+	height: 75px;
+}
+.container .button_cont .visual_ .line2{
+	width: 75px;
+	height: 0vw;
+}
+.container .button_cont:hover .visual_ .line1,
+.container .button_cont:hover .visual_ .line2,
+.container .button_cont:hover .visual_ .outline_cir1{
+	transition-duration: 2.5s;
+}
+.container .button_cont .btn:hover{
+	background-color: #1A3636;
+	box-shadow: 0px 0px 15px #000000 inset;
+}
+
+.container .button_cont .btn:active{
+	background-color: #5F6F65;
+	box-shadow: 0px 0px 15px #808D7C inset;
+	transition-duration: 0.25s;
+}
+
+/*
+	#C9DABF
+	#9CA986
+	#808D7C
+	#5F6F65
+*/

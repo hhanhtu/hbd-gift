@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Nanum+Gothic:wght@400;700;800&family=Parkinsans:wght@300..800&family=SUSE:wght@100..800&display=swap');
+
+.main_container{
+	background-color: transparent;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	transition: all 1s;
+	display: grid;
+	place-content: center;
+	overflow: hidden;
+}
+.heart_container{
+	position: relative;
+	background-color: grey;
+	rotate: -135deg;
+	top: 150px;
+}
+.heart_container .p-left, .heart_container .p-right{
+	position: absolute;
+	transition: all 3s;
+}
+.heart_container .p-left{
+	background-image: linear-gradient(0deg, #E1AEFF, #FF78C4);
+	height: 200px;
+	width: 0px;
+	border-bottom-right-radius: 100px;
+	border-top-right-radius: 100px;
+}
+.heart_container .p-right{
+	background-image: linear-gradient(0deg, #FF78C4, #E1AEFF);
+	height: 0px;
+	width: 200px;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+}
+.heart-effects_container1{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	display: grid;
+	place-items: center;
+	transition: all 1.5s;
+}
+.heart-effects_container1 .heart-effects_container2{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	transition: all 2.5s;
+}
+
+.text_label{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	z-index: 1;
+}
+.text_label > *{
+	opacity: 0;
+	user-select: none;
+	font-size: clamp(5vw, 25px, 8vw);
+	font-family: "Great Vibes", cursive;
+	transition: all 3s;
+}
+.text_label .fromme{
+	font-size: clamp(3vw, 25px, 8vw);
+	letter-spacing: 5px;
+	position: absolute;
+	grid-row: 1/1;
+	top: 0;
+	transform: translate(0%, -50%);
+}
+.text_label .iloveyou{
+	position: relative;
+	grid-row: 2/3;
+	display: grid;
+	place-items: center;
+	transition: all 0.5s;
+}
+.text_label .iloveyou .black-tag{
+	position: absolute;
+	width: 0%;
+	height: calc(100% + 10px);
+	background-image: linear-gradient(45deg, #FF3EA5, #8967B3);
+	border-radius: 50px;
+	transition: all 2.5s;
+}
+.text_label .iloveyou .text{
+	transition: all 4s;
+	position: relative;
+	z-index: 1;
+	opacity: 0;
+	user-select: none;
+	font-size: clamp(2vw, 25px, 8vw);
+	font-family: "Great Vibes", cursive;
+}
+.text_label .ijustwant{
+	transform: translate(-50%, 0%);
+	position: absolute;
+	grid-row: 3/3;
+	left: 0;
+}
